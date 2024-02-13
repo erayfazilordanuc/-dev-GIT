@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class notortalama {
+public class gradeaverage {
     public static void main(String[] n){
     
     Scanner input = new Scanner(System.in);
