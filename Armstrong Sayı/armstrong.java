@@ -10,21 +10,11 @@ public class armstrong {
             cons*=a;
         return cons;}
     public static long digitlong(long x){
-    // for less than 1.000.000
-        int digit=0;
-    if(x<10&&x>=0){
-     digit=1;
-    }if(x<100&&x>9){
-        digit=2;
-    }if(x<1000&&x>99){
-        digit=3;
-    }if(x<10000&&x>999){
-        digit=4;
-    }if(x<100000&&x>9999){
-        digit=5;
-    }if(x<1000000&&x>99999){
-        digit=6;
-    }return digit;
+      int counter=0;
+      while(x>0){
+        x=(x-x%10)/10;
+        counter++;
+      }return counter;
     }
     public static void main(String[] args){
     
