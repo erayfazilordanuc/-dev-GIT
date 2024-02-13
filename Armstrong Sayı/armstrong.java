@@ -25,10 +25,10 @@ public class armstrong {
     int remainder;
     int total=0;
     long l=digitlong(a);
-    for(long x=l;x>0;x--){
-     remainder=a%10;
-     total+=expo(remainder,l);
-     a=(a-(a%10))/10;
+    for(long x=l;x>0;x--){//basamak sayısı kere her basamağın 3 üssünü alan döngü
+     remainder=a%10;// son basamağı bulur
+     total+=expo(remainder,l);//üssünü alır
+     a=(a-(a%10))/10;//girilen sayıdan son basamağı çıkarıp 10' böler bu işlemi bu sayı üzerinden devam ettirir
     }if(total==b){
         System.out.println("This is an armstrong number");
     }
