@@ -10,7 +10,7 @@ public class numbersorting {
     System.out.print("Enter how many numbers will you sort :");
     int a = input.nextInt();
     System.out.println("");
-    int biggest=0;
+    long smallest=9223372036854775807l,biggest=0;
     for(int c=1;c<=a;c++){
         if(first(c)==1){
             System.out.print("Enter the "+c+"st number :");    
@@ -23,8 +23,10 @@ public class numbersorting {
         int x = input.nextInt();
         if(x>biggest){
             biggest=x;
+        }if(x<smallest){
+            smallest=x;
         }
     }System.out.println("\nThe biggest number is :"+biggest+"\n");
-    
+     System.out.println("\nThe smallest number is :"+smallest+"\n");
     }
 }
