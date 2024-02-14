@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class prime {
+public class firsthundredprime {
     public static int prime(int x){
         int state=1;
         switch(x){
@@ -10,12 +10,17 @@ public class prime {
             default: for(int a=2;a<x;a++){
                 if(x%a==0){
                  state = 0;
-             }}}return state;}
+             }}}return state;}// Çıktı 1 ise asal, 0 ise asal değil
+    public static void wantprime(int x){
+        for(int a=0;a<=x;a++){
+            if(prime(a)==1){
+                System.out.print(a+" ");
+            }
+        }
+    }
     public static void main(String[] args){
 
-    Scanner input = new Scanner(System.in);
-    System.out.println("Enter a number");
-    int a = input.nextInt();
-    System.out.println(prime(a));
+    wantprime(100);
+
     }
 }
