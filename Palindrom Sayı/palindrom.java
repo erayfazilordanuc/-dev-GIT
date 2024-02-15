@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class palindrom2 {
+public class palindrom {
     static int reversenumber(int x){
     int reversenumber=0,lastnumber; 
     while(x>0){
