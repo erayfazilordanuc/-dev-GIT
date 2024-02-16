@@ -17,10 +17,11 @@ public class Match {
 
     void run(){
         Random rand = new Random();
-        int random = rand.nextInt(1);
+        int random = rand.nextInt(2);
     if((this.f1.health>=this.minweight && this.f1.health<=this.maxweight) && (this.f2.health>=this.minweight && this.f2.health<=this.maxweight)){
         System.out.println(this.f1.name+" canı "+this.f1.health);
         System.out.println(this.f2.name+" canı "+this.f2.health);
+        if(random==1){
         while(this.f2.health>0 && this.f1.health>0){
            this.f2.health = f1.hit(this.f2);
            if(this.f2.health==0){
@@ -33,6 +34,20 @@ public class Match {
            }
            if(this.f1.health==0){
             System.out.println("\n"+this.f2.name+" kazandı\n");
+           }}else{
+            while(this.f2.health>0 && this.f1.health>0){
+           this.f1.health = f2.hit(this.f1);
+           if(this.f1.health==0){
+            break;
+           }
+           this.f2.health = f1.hit(this.f2);
+           }
+           if(this.f1.health==0){
+            System.out.println("\n"+this.f2.name+" kazandı\n");
+           }
+           if(this.f2.health==0){
+            System.out.println("\n"+this.f1.name+" kazandı\n");
+           }
            }
           }else{
      System.out.println("Sporcuların sikletleri uyuşmuyor");}
