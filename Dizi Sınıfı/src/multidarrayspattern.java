@@ -4,9 +4,9 @@ public class multidarrayspattern {
     }
 
     static void patternB(){
-        String[][] patt = new String[7][7];
-        for(int b=0;b<7;b++){
-        if(b==0||b==3||b==6){
+        String[][] patt = new String[7][7];//String[x][y]
+        for(int b=0;b<7;b++){             //b=0;b<y;b++
+        if(b==0||b==3||b==6){            //b==0||b==
             for(int a=0;a<7;a++){
                 patt[b][a]="*";
             if(a==6){
@@ -14,7 +14,7 @@ public class multidarrayspattern {
             }
         }}else{
         patt[b][0]="*";
-        for(int a=1;a<7;a++){
+        for(int a=1;a<6;a++){
             patt[b][a]=" ";
         }
         patt[b][6]="*";
@@ -40,3 +40,10 @@ public class multidarrayspattern {
 ******
 
 */
+
+
+
+
+
+
+

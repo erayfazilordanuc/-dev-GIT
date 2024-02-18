@@ -1,6 +1,15 @@
+import java.util.Scanner;
+
 public class repeate {
     public static void main(String[] args) {
-        int[] list = {3,2,5,3,4,4,5,7,6,5,3,3,4,6,7,8,8,8,3,1,1,2,2};
+        Scanner input = new Scanner(System.in);
+        System.out.print("Oluşturmak istediğiniz dizinin uzunluğunu giriniz :");
+        int a =input.nextInt();
+        int[] list = new int[a];
+        for(int b=1;b<=list.length;b++){
+            System.out.print("\n"+b+". elemanı giriniz :");
+            list[b-1]=input.nextInt();
+        }
         evenrepeaters(list);
     }
     
@@ -29,7 +38,7 @@ public class repeate {
         if(stat==false){
         repeaters[index]=array[a];
             index++;
-            System.out.println(array[a]+" , "+(sayac+1)+" kere geçiyor");}
+            System.out.println(array[a]+" sayısı "+(sayac+1)+" kere geçiyor");}
 
     }
     }
@@ -56,7 +65,7 @@ public class repeate {
         if(stat==false){
         repeaters2[index2]=array[a];
             index2++;
-            System.out.println(array[a]+" , "+(sayac+1)+" kere geçiyor");}
+            System.out.println(array[a]+" sayısı "+(sayac+1)+" kere geçiyor");}
 
     }
     }
