@@ -81,20 +81,36 @@ public class MineSweeper {
             break;
         }
 
-        print(front);
+        print(back);
         
         int mines=0;
-        for(int y=1;y<front.length-1;y++){//Oyuncunun kazandığını yazan kod
-            for(int u=1;u<front[1].length-1;u++){
-                if(front[y][u]!=" - "){
+        for(int a=0;a<back.length;a++){
+            for(int b=0;b<back[1].length;b++){
+                if(back[a][b] == " * "){
                     mines++;
                 }
             }
         }
-
-        if(mines==back.length*2){
-            state = false;
+        int foundmines=0;
+        for(int y=1;y<front.length-1;y++){//Oyuncunun kazandığını yazan kod
+            for(int u=1;u<front[1].length-1;u++){
+                if(front[y][u]!=" - "){
+                    foundmines++;
+                }
+            }
         }
+
+        System.out.println(mines);
+        System.out.println(foundmines);
+
+        if(foundmines==mines){
+            print(front);
+            System.out.println("\nWINNER\n");
+            state = false;
+            break;
+        }
+        
+        print(front);
 
     }print(back);
     
