@@ -84,15 +84,15 @@ public class MineSweeper {
         print(front);
         
         int mines=0;
-        for(int y=1;y<back.length-1;y++){//Oyuncunun kazandığını yazan kod
-            for(int u=1;y<back[1].length;u++){
+        for(int y=1;y<front.length-1;y++){//Oyuncunun kazandığını yazan kod
+            for(int u=1;u<front[1].length-1;u++){
                 if(front[y][u]!=" - "){
                     mines++;
                 }
             }
         }
 
-        if(mines==front.length*2){
+        if(mines==back.length*2){
             state = false;
         }
 
